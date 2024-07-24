@@ -1,0 +1,11 @@
+runtime: nodejs18
+env: standard
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 5
+  target_cpu_utilization: 0.7  # Utilización de CPU objetivo del 70%
+
+handlers:
+  - url: /.*
+    script: auto
