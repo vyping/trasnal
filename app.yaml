@@ -1,0 +1,12 @@
+runtime: nodejs22
+
+env_variables:
+  NODE_ENV: 'production'  # Opcional: Configuración del entorno para producción
+
+handlers:
+  - url: /.*
+    script: auto
+
+automatic_scaling:
+  min_instances: 1  # Número mínimo de instancias
+  max_instances: 5  # Número máximo de instancias
